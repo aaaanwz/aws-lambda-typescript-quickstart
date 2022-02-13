@@ -1,0 +1,12 @@
+{
+    "name": "typescript-lambda",
+    "version": "1.0.0",
+    "main": "index.js",
+    "dependencies": {
+        "rimraf": "^3.0.2"
+    },
+    "scripts": {
+        "clean": "rimraf dist",
+        "build": "npm run clean && tsc -p tsconfig.json && cp -f ./package.json ./dist && npm --prefix ./dist install ./dist"
+    }
+}
